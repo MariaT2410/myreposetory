@@ -1,0 +1,7 @@
+rootProject.name = 'library2'
+include 'controller'
+include 'model'
+project(':model').projectDir = new File(settingsDir, '../model')
+project(':controller').projectDir = new File(settingsDir, '../controller')
+
+
