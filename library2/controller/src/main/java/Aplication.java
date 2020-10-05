@@ -1,3 +1,7 @@
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.awt.print.Book;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,8 +14,18 @@ public class Aplication {
 
         System.out.println("Enter autor id: ");
         int autorId = in.nextInt();
-        booksView.getBooksByAutorId(autorId);
 
+
+        GsonBuilder builder = new GsonBuilder();
+        Gson gson = builder.create();
+
+
+        Book books[] = booksView.getBooksByAutorId(autorId).toArray(new Book[0]);
+        for(int i=0;i<books.length;i++){
+
+            System.out.println(gson.toJson(books[i]));
+
+        }
 
     }
 }

@@ -33,7 +33,7 @@ public class FactoryLibrary {
 
     private void populateAutors() {
         for (int i = 0; i < BOOKS_SIZE; i++) {
-            Book d = new Book(numberOfId.getAndIncrement(), "Department  " + i);
+            Book d = new Book(numberOfId.getAndIncrement(), "Autor  " + i);
             books.put(d.getId(), d);
         }
     }
@@ -41,13 +41,13 @@ public class FactoryLibrary {
     public List<Book> getBooksByAutorId(int idAutor) {
         Collection<Book> c = books.values();
         List<Book> list = new ArrayList<Book>(c);
-        List<Book> employeesGet = new ArrayList<>();
-        for (Book employee : list) {
-            if (employee.getId() == idAutor) {
-                employeesGet.add(employee);
+        List<Book> booksGet = new ArrayList<>();
+        for (Book book : list) {
+            if (book.getId() == idAutor) {
+                booksGet.add(book);
             }
         }
-        return employeesGet;
+        return booksGet;
     }
 
 }
