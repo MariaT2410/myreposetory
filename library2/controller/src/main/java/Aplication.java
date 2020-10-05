@@ -23,7 +23,7 @@ public class Aplication {
         List<Book> bookList =  booksView.getBooksByAutorId(autorId);
             System.out.println(gson.toJson(bookList));
 
-        }
+        
 
     }
 }
