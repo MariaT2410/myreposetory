@@ -20,10 +20,8 @@ public class Aplication {
         Gson gson = builder.create();
 
 
-        Book books[] = booksView.getBooksByAutorId(autorId).toArray(new Book[0]);
-        for(int i=0;i<books.length;i++){
-
-            System.out.println(gson.toJson(books[i]));
+        List<Book> bookList =  booksView.getBooksByAutorId(autorId);
+            System.out.println(gson.toJson(bookList));
 
         }
 
