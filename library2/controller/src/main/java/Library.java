@@ -14,9 +14,7 @@ public class Library {
     @Setter
     private   String name;
 
-    @Override public String toString() {
-        return String.format("%s (age: %d)", name, id);
-    }
+
 
 
 }
