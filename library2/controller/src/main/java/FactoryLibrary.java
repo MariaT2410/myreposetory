@@ -33,7 +33,7 @@ public class FactoryLibrary {
 
     private void populateAutors() {
         for (int i = 0; i < BOOKS_SIZE; i++) {
-            Book d = new Book(numberOfId.getAndIncrement(), "Autor  " + i);
+            Autor d = new Autor(numberOfId.getAndIncrement(), "Autor  " + i);
             books.put(d.getId(), d);
         }
     }
