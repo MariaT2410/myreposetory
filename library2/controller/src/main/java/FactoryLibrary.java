@@ -32,9 +32,9 @@ public class FactoryLibrary {
     }
 
     private void populateAutors() {
-        for (int i = 0; i < BOOKS_SIZE; i++) {
+        for (int i = 0; i < AUTOR_SIZE; i++) {
             Autor d = new Autor(numberOfId.getAndIncrement(), "Autor  " + i);
-            books.put(d.getId(), d);
+            autors.put(d.getId(), d);
         }
     }
 
